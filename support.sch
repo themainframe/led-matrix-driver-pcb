@@ -1,0 +1,768 @@
+EESchema Schematic File Version 4
+LIBS:led-array-driver-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR0101
+U 1 1 5EA92373
+P 3050 3250
+F 0 "#PWR0101" H 3050 3000 50  0001 C CNN
+F 1 "GND" H 3055 3077 50  0000 C CNN
+F 2 "" H 3050 3250 50  0001 C CNN
+F 3 "" H 3050 3250 50  0001 C CNN
+	1    3050 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5EA92374
+P 3750 2750
+F 0 "C2" H 3865 2796 50  0000 L CNN
+F 1 "10uF/25V" H 3865 2705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3788 2600 50  0001 C CNN
+F 3 "~" H 3750 2750 50  0001 C CNN
+F 4 "Mouser" H 3750 2750 50  0001 C CNN "Vendor"
+F 5 "0.069" H 3750 2750 50  0001 C CNN "Vendor Price 10p"
+F 6 "0.172" H 3750 2750 50  0001 C CNN "Vendor Price 1p"
+F 7 "963-TMK212BBJ106MG-T" H 3750 2750 50  0001 C CNN "Vendor SKU"
+	1    3750 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5EA92375
+P 2150 2750
+F 0 "C1" H 2265 2796 50  0000 L CNN
+F 1 "10uF/25V" H 2265 2705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2188 2600 50  0001 C CNN
+F 3 "~" H 2150 2750 50  0001 C CNN
+F 4 "Mouser" H 2150 2750 50  0001 C CNN "Vendor"
+F 5 "0.069" H 2150 2750 50  0001 C CNN "Vendor Price 10p"
+F 6 "0.172" H 2150 2750 50  0001 C CNN "Vendor Price 1p"
+F 7 "963-TMK212BBJ106MG-T" H 2150 2750 50  0001 C CNN "Vendor SKU"
+	1    2150 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 2600 2600 2600
+Wire Wire Line
+	3350 2600 3750 2600
+$Comp
+L power:GND #PWR0102
+U 1 1 5EA92376
+P 2150 3100
+F 0 "#PWR0102" H 2150 2850 50  0001 C CNN
+F 1 "GND" H 2155 2927 50  0000 C CNN
+F 2 "" H 2150 3100 50  0001 C CNN
+F 3 "" H 2150 3100 50  0001 C CNN
+	1    2150 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 3100 2150 2900
+Wire Wire Line
+	3750 2600 3750 2300
+Connection ~ 3750 2600
+$Comp
+L Regulator_Linear:LD39015M33R U1
+U 1 1 5EA92372
+P 3050 2700
+F 0 "U1" H 3050 3042 50  0000 C CNN
+F 1 "LD39015M33R" H 3050 2951 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3050 3025 50  0001 C CIN
+F 3 "http://www.st.com/resource/en/datasheet/ld39015.pdf" H 3050 2700 50  0001 C CNN
+F 4 "511-LD39015M33R" H 3050 2700 50  0001 C CNN "Vendor SKU"
+F 5 "Mouser" H 3050 2700 50  0001 C CNN "Vendor"
+F 6 "0.61" H 3050 2700 50  0001 C CNN "Vendor Price 10p"
+F 7 "0.72" H 3050 2700 50  0001 C CNN "Vendor Price 1p"
+	1    3050 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 3000 3050 3250
+Wire Wire Line
+	2750 2700 2600 2700
+Wire Wire Line
+	2600 2700 2600 2600
+Connection ~ 2600 2600
+Wire Wire Line
+	2600 2600 2750 2600
+Wire Wire Line
+	3750 2900 3750 3150
+$Comp
+L power:GND #PWR0103
+U 1 1 5EA92377
+P 3750 3150
+F 0 "#PWR0103" H 3750 2900 50  0001 C CNN
+F 1 "GND" H 3755 2977 50  0000 C CNN
+F 2 "" H 3750 3150 50  0001 C CNN
+F 3 "" H 3750 3150 50  0001 C CNN
+	1    3750 3150
+	1    0    0    -1  
+$EndComp
+Text Notes 2850 1750 0    100  ~ 0
+LDO
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5EA92378
+P 4200 2300
+F 0 "TP1" H 4258 2418 50  0000 L CNN
+F 1 "3V3" H 4258 2327 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4400 2300 50  0001 C CNN
+F 3 "~" H 4400 2300 50  0001 C CNN
+	1    4200 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2300 3750 2300
+Connection ~ 3750 2300
+Wire Wire Line
+	3750 2300 3750 2100
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5EA92379
+P 4650 2300
+F 0 "TP2" H 4708 2418 50  0000 L CNN
+F 1 "GND" H 4708 2327 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4850 2300 50  0001 C CNN
+F 3 "~" H 4850 2300 50  0001 C CNN
+	1    4650 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2300 4650 2450
+$Comp
+L power:GND #PWR0104
+U 1 1 5DF6C945
+P 4650 2450
+F 0 "#PWR0104" H 4650 2200 50  0001 C CNN
+F 1 "GND" H 4655 2277 50  0000 C CNN
+F 2 "" H 4650 2450 50  0001 C CNN
+F 3 "" H 4650 2450 50  0001 C CNN
+	1    4650 2450
+	1    0    0    -1  
+$EndComp
+Text GLabel 1850 2600 0    49   Input ~ 0
+PP5V
+Wire Wire Line
+	2150 2600 1850 2600
+Connection ~ 2150 2600
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 5EA80DF5
+P 3750 2100
+F 0 "#PWR0105" H 3750 1950 50  0001 C CNN
+F 1 "+3.3V" H 3765 2273 50  0000 C CNN
+F 2 "" H 3750 2100 50  0001 C CNN
+F 3 "" H 3750 2100 50  0001 C CNN
+	1    3750 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5DC44E9D
+P 8000 2600
+F 0 "#PWR0106" H 8000 2350 50  0001 C CNN
+F 1 "GND" H 8005 2427 50  0000 C CNN
+F 2 "" H 8000 2600 50  0001 C CNN
+F 3 "" H 8000 2600 50  0001 C CNN
+	1    8000 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_TVS D1
+U 1 1 5DC487A8
+P 7600 2250
+F 0 "D1" V 7554 2329 50  0000 L CNN
+F 1 "D_TVS" V 7645 2329 50  0000 L CNN
+F 2 "Diode_SMD:D_0603_1608Metric" H 7600 2250 50  0001 C CNN
+F 3 "~" H 7600 2250 50  0001 C CNN
+F 4 "Mouser" H 7600 2250 50  0001 C CNN "Vendor"
+F 5 "576-XGD10603MR" H 7600 2250 50  0001 C CNN "Vendor SKU"
+F 6 "0.275" H 7600 2250 50  0001 C CNN "Vendor Price 10p"
+F 7 "0.336" H 7600 2250 50  0001 C CNN "Vendor Price 1p"
+	1    7600 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_TVS D2
+U 1 1 5DC49AFA
+P 8000 2250
+F 0 "D2" V 7954 2329 50  0000 L CNN
+F 1 "D_TVS" V 8045 2329 50  0000 L CNN
+F 2 "Diode_SMD:D_0603_1608Metric" H 8000 2250 50  0001 C CNN
+F 3 "~" H 8000 2250 50  0001 C CNN
+F 4 "Mouser" H 8000 2250 50  0001 C CNN "Vendor"
+F 5 "576-XGD10603MR" H 8000 2250 50  0001 C CNN "Vendor SKU"
+F 6 "0.275" H 8000 2250 50  0001 C CNN "Vendor Price 10p"
+F 7 "0.336" H 8000 2250 50  0001 C CNN "Vendor Price 1p"
+	1    8000 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_TVS D3
+U 1 1 5DC4A847
+P 8400 2250
+F 0 "D3" V 8354 2329 50  0000 L CNN
+F 1 "D_TVS" V 8445 2329 50  0000 L CNN
+F 2 "Diode_SMD:D_0603_1608Metric" H 8400 2250 50  0001 C CNN
+F 3 "~" H 8400 2250 50  0001 C CNN
+F 4 "Mouser" H 8400 2250 50  0001 C CNN "Vendor"
+F 5 "576-XGD10603MR" H 8400 2250 50  0001 C CNN "Vendor SKU"
+F 6 "0.275" H 8400 2250 50  0001 C CNN "Vendor Price 10p"
+F 7 "0.336" H 8400 2250 50  0001 C CNN "Vendor Price 1p"
+	1    8400 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7300 2000 7600 2000
+Wire Wire Line
+	7600 2000 7600 2100
+Wire Wire Line
+	7300 1900 8000 1900
+Wire Wire Line
+	7300 1700 8400 1700
+Wire Wire Line
+	8400 1700 8400 2100
+Wire Wire Line
+	8000 1900 8000 2100
+Connection ~ 8000 2450
+Wire Wire Line
+	8000 2450 8400 2450
+Wire Wire Line
+	8000 2600 8000 2450
+Wire Wire Line
+	7000 2300 7000 2450
+Connection ~ 7600 2100
+Wire Wire Line
+	7600 2100 7600 2150
+Connection ~ 8000 2100
+Wire Wire Line
+	8000 2100 8000 2150
+Connection ~ 8400 2100
+Wire Wire Line
+	8400 2100 8400 2150
+Wire Wire Line
+	8400 2400 8400 2450
+Wire Wire Line
+	8000 2450 8000 2400
+Wire Wire Line
+	7600 2450 8000 2450
+Wire Wire Line
+	7000 2450 7600 2450
+Connection ~ 7600 2450
+Wire Wire Line
+	7600 2400 7600 2450
+Wire Wire Line
+	9050 2000 7600 2000
+Connection ~ 7600 2000
+Wire Wire Line
+	9050 1900 8000 1900
+Connection ~ 8000 1900
+Text Label 9050 2000 2    50   ~ 0
+USB_DN
+Text Label 9050 1900 2    50   ~ 0
+USB_DP
+Text Notes 7300 1100 0    100  ~ 0
+USB Connector
+Wire Wire Line
+	6900 2300 6900 2450
+Wire Wire Line
+	6900 2450 7000 2450
+Connection ~ 7000 2450
+$Comp
+L Device:Polyfuse F1
+U 1 1 5F1855FC
+P 8700 1700
+F 0 "F1" V 8475 1700 50  0000 C CNN
+F 1 "2A" V 8566 1700 50  0000 C CNN
+F 2 "Fuse:Fuse_0805_2012Metric" H 8750 1500 50  0001 L CNN
+F 3 "~" H 8700 1700 50  0001 C CNN
+F 4 "" H 8700 1700 50  0001 C CNN "Vendor"
+F 5 "" H 8700 1700 50  0001 C CNN "Vendor SKU"
+F 6 "" H 8700 1700 50  0001 C CNN "Vendor Price 10p"
+F 7 "" H 8700 1700 50  0001 C CNN "Vendor Price 1p"
+	1    8700 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5F1855F3
+P 7000 1900
+F 0 "J1" H 7057 2367 50  0000 C CNN
+F 1 "USB_B_Micro" H 7057 2276 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_GCT_USB3076-30-A" H 7150 1850 50  0001 C CNN
+F 3 "~" H 7150 1850 50  0001 C CNN
+F 4 "Farnell" H 7000 1900 50  0001 C CNN "Vendor"
+F 5 "2443117" H 7000 1900 50  0001 C CNN "Vendor SKU"
+F 6 "0.845" H 7000 1900 50  0001 C CNN "Vendor Price 10p"
+F 7 "0.845" H 7000 1900 50  0001 C CNN "Vendor Price 1p"
+	1    7000 1900
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7300 2100
+Text Label 7750 1700 1    50   ~ 0
+USB_5V
+$Comp
+L Transistor_BJT:S8050_SOT23 Q1
+U 1 1 5DC1CD77
+P 2900 5800
+F 0 "Q1" H 3090 5846 50  0000 L CNN
+F 1 "S8050" H 3090 5755 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3100 5725 50  0001 L CIN
+F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 2900 5800 50  0001 L CNN
+F 4 "Mouser" H 2900 5800 50  0001 C CNN "Vendor"
+F 5 "750-SS8050-G" H 2900 5800 50  0001 C CNN "Vendor SKU"
+F 6 "0.123" H 2900 5800 50  0001 C CNN "Vendor Price 10p"
+F 7 "0.188" H 2900 5800 50  0001 C CNN "Vendor Price 1p"
+	1    2900 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:S8050_SOT23 Q2
+U 1 1 5DC1D449
+P 2900 6600
+F 0 "Q2" H 3090 6646 50  0000 L CNN
+F 1 "S8050" H 3090 6555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3100 6525 50  0001 L CIN
+F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 2900 6600 50  0001 L CNN
+F 4 "Mouser" H 2900 6600 50  0001 C CNN "Vendor"
+F 5 "750-SS8050-G" H 2900 6600 50  0001 C CNN "Vendor SKU"
+F 6 "0.123" H 2900 6600 50  0001 C CNN "Vendor Price 10p"
+F 7 "0.188" H 2900 6600 50  0001 C CNN "Vendor Price 1p"
+	1    2900 6600
+	1    0    0    1   
+$EndComp
+Text HLabel 4200 5600 2    50   Output ~ 0
+MCU_ENABLE
+Text HLabel 4200 6800 2    50   Output ~ 0
+MCU_BOOT
+Wire Wire Line
+	4200 5600 3950 5600
+Wire Wire Line
+	3000 6800 3950 6800
+$Comp
+L Device:R R2
+U 1 1 5DC1EAE9
+P 2150 6600
+F 0 "R2" V 2357 6600 50  0000 C CNN
+F 1 "10k" V 2266 6600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2080 6600 50  0001 C CNN
+F 3 "~" H 2150 6600 50  0001 C CNN
+F 4 "0.005" H 2150 6600 50  0001 C CNN "Vendor Price 100p"
+F 5 "0.013" H 2150 6600 50  0001 C CNN "Vendor Price 10p"
+F 6 "0.082" H 2150 6600 50  0001 C CNN "Vendor Price 1p"
+F 7 "603-RC0603FR-0710KL" H 2150 6600 50  0001 C CNN "Vendor SKU"
+F 8 "Mouser" H 2150 6600 50  0001 C CNN "Vendor"
+	1    2150 6600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5DC1F2E6
+P 2150 5800
+F 0 "R1" V 1943 5800 50  0000 C CNN
+F 1 "10k" V 2034 5800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2080 5800 50  0001 C CNN
+F 3 "~" H 2150 5800 50  0001 C CNN
+F 4 "0.005" H 2150 5800 50  0001 C CNN "Vendor Price 100p"
+F 5 "0.013" H 2150 5800 50  0001 C CNN "Vendor Price 10p"
+F 6 "0.082" H 2150 5800 50  0001 C CNN "Vendor Price 1p"
+F 7 "603-RC0603FR-0710KL" H 2150 5800 50  0001 C CNN "Vendor SKU"
+F 8 "Mouser" H 2150 5800 50  0001 C CNN "Vendor"
+	1    2150 5800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2300 5800 2700 5800
+Wire Wire Line
+	2700 6600 2300 6600
+Wire Wire Line
+	2000 5800 1900 5800
+Wire Wire Line
+	1900 6150 3000 6300
+Wire Wire Line
+	3000 6300 3000 6400
+Wire Wire Line
+	3000 6000 3000 6100
+Wire Wire Line
+	1900 6300 3000 6100
+Wire Wire Line
+	1900 5800 1900 6150
+Wire Wire Line
+	1900 6300 1900 6600
+Wire Wire Line
+	1900 6600 2000 6600
+Text Label 1700 5800 0    50   ~ 0
+DTR
+Text Label 1700 6600 0    50   ~ 0
+RTS
+Wire Wire Line
+	1700 6600 1900 6600
+Connection ~ 1900 6600
+Wire Wire Line
+	1700 5800 1900 5800
+Connection ~ 1900 5800
+Text Notes 2450 5100 0    100  ~ 0
+Boot Control Trickery
+Text GLabel 9050 1700 2    49   Input ~ 0
+PP5V
+Wire Wire Line
+	8400 1700 8550 1700
+Connection ~ 8400 1700
+Wire Wire Line
+	8850 1700 9050 1700
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5ECA669B
+P 3950 5700
+AR Path="/5EA0B24D/5ECA669B" Ref="TP?"  Part="1" 
+AR Path="/5EA5FEAD/5ECA669B" Ref="TP8"  Part="1" 
+F 0 "TP8" H 3892 5726 50  0000 R CNN
+F 1 "MCU_EN" H 3892 5817 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4150 5700 50  0001 C CNN
+F 3 "~" H 4150 5700 50  0001 C CNN
+	1    3950 5700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3950 5700 3950 5600
+Connection ~ 3950 5600
+Wire Wire Line
+	3950 5600 3000 5600
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5ECAD588
+P 3950 6700
+AR Path="/5EA0B24D/5ECAD588" Ref="TP?"  Part="1" 
+AR Path="/5EA5FEAD/5ECAD588" Ref="TP9"  Part="1" 
+F 0 "TP9" H 4008 6818 50  0000 L CNN
+F 1 "MCU_B" H 4008 6727 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4150 6700 50  0001 C CNN
+F 3 "~" H 4150 6700 50  0001 C CNN
+	1    3950 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 6700 3950 6800
+Connection ~ 3950 6800
+Wire Wire Line
+	3950 6800 4200 6800
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5ECB0CD3
+P 1900 5600
+AR Path="/5EA0B24D/5ECB0CD3" Ref="TP?"  Part="1" 
+AR Path="/5EA5FEAD/5ECB0CD3" Ref="TP6"  Part="1" 
+F 0 "TP6" H 1650 5750 50  0000 L CNN
+F 1 "DTR" H 1650 5650 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2100 5600 50  0001 C CNN
+F 3 "~" H 2100 5600 50  0001 C CNN
+	1    1900 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 5600 1900 5800
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5ECB46B8
+P 1900 6800
+AR Path="/5EA0B24D/5ECB46B8" Ref="TP?"  Part="1" 
+AR Path="/5EA5FEAD/5ECB46B8" Ref="TP7"  Part="1" 
+F 0 "TP7" H 1650 6950 50  0000 L CNN
+F 1 "RTS" H 1650 6850 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2100 6800 50  0001 C CNN
+F 3 "~" H 2100 6800 50  0001 C CNN
+	1    1900 6800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1900 6800 1900 6600
+Wire Wire Line
+	9450 4500 9650 4500
+Wire Wire Line
+	9650 4900 9450 4900
+NoConn ~ 9450 5500
+NoConn ~ 9450 5400
+NoConn ~ 9450 5300
+NoConn ~ 9450 5200
+NoConn ~ 8250 4600
+NoConn ~ 9450 4300
+NoConn ~ 9450 4800
+NoConn ~ 9450 5000
+Wire Wire Line
+	9650 4700 9450 4700
+Wire Wire Line
+	9450 4600 9650 4600
+Wire Wire Line
+	8850 5800 8900 5800
+$Comp
+L power:GND #PWR0107
+U 1 1 5DC2E734
+P 8900 5950
+F 0 "#PWR0107" H 8900 5700 50  0001 C CNN
+F 1 "GND" H 8905 5777 50  0000 C CNN
+F 2 "" H 8900 5950 50  0001 C CNN
+F 3 "" H 8900 5950 50  0001 C CNN
+	1    8900 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 5800 8900 5950
+Connection ~ 8900 5800
+Wire Wire Line
+	8900 5800 8950 5800
+Text HLabel 9650 4700 2    50   Output ~ 0
+FT_TX
+Text Label 7800 5300 0    50   ~ 0
+USB_DP
+Text Label 7800 5400 0    50   ~ 0
+USB_DN
+Wire Wire Line
+	7800 5400 8250 5400
+Text Label 9650 4900 2    50   ~ 0
+DTR
+Text Label 9650 4500 2    50   ~ 0
+RTS
+Text Notes 8600 3200 0    100  ~ 0
+USB to UART
+Text HLabel 9650 4600 2    50   Input ~ 0
+FT_RX
+$Comp
+L Device:C C4
+U 1 1 5DCE11F9
+P 7500 3900
+F 0 "C4" H 7250 3950 50  0000 L CNN
+F 1 "4.7uF/25V" H 6950 3850 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7538 3750 50  0001 C CNN
+F 3 "~" H 7500 3900 50  0001 C CNN
+F 4 "Mouser" H 7500 3900 50  0001 C CNN "Vendor"
+F 5 "0.09" H 7500 3900 50  0001 C CNN "Vendor Price 10p"
+F 6 "0.098" H 7500 3900 50  0001 C CNN "Vendor Price 1p"
+F 7 "791-0805X475M250CT" H 7500 3900 50  0001 C CNN "Vendor SKU"
+	1    7500 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5DCE28A2
+P 7500 4250
+F 0 "#PWR0108" H 7500 4000 50  0001 C CNN
+F 1 "GND" H 7505 4077 50  0000 C CNN
+F 2 "" H 7500 4250 50  0001 C CNN
+F 3 "" H 7500 4250 50  0001 C CNN
+	1    7500 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 4250 7500 4050
+Wire Wire Line
+	7800 5300 8250 5300
+Wire Wire Line
+	7750 3500 7750 4900
+Wire Wire Line
+	7500 3750 7500 3500
+$Comp
+L Device:R R13
+U 1 1 5DCF26D3
+P 8250 3750
+F 0 "R13" H 8320 3796 50  0000 L CNN
+F 1 "2k" H 8320 3705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8180 3750 50  0001 C CNN
+F 3 "~" H 8250 3750 50  0001 C CNN
+F 4 "Mouser" H 8250 3750 50  0001 C CNN "Vendor"
+F 5 "0.005" H 8250 3750 50  0001 C CNN "Vendor Price 100p"
+F 6 "0.013" H 8250 3750 50  0001 C CNN "Vendor Price 10p"
+F 7 "0.082" H 8250 3750 50  0001 C CNN "Vendor Price 1p"
+F 8 "603-RC0603FR-072K2L" H 8250 3750 50  0001 C CNN "Vendor SKU"
+	1    8250 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 4300 8250 3900
+Wire Wire Line
+	8250 3600 8250 3500
+Wire Wire Line
+	8250 3500 8750 3500
+Wire Wire Line
+	8750 3500 8750 4000
+Connection ~ 8250 3500
+$Comp
+L Device:R R11
+U 1 1 5DD635FC
+P 7250 4950
+F 0 "R11" H 7320 4996 50  0000 L CNN
+F 1 "22.1k" H 7320 4905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7180 4950 50  0001 C CNN
+F 3 "~" H 7250 4950 50  0001 C CNN
+F 4 "0.005" H 7250 4950 50  0001 C CNN "Vendor Price 100p"
+F 5 "0.013" H 7250 4950 50  0001 C CNN "Vendor Price 10p"
+F 6 "0.082" H 7250 4950 50  0001 C CNN "Vendor Price 1p"
+F 7 "603-RC0603FR-0722K1L" H 7250 4950 50  0001 C CNN "Vendor SKU"
+F 8 "Mouser" H 7250 4950 50  0001 C CNN "Vendor"
+	1    7250 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 4800 7250 4800
+$Comp
+L Device:R R12
+U 1 1 5DD6727F
+P 7250 5450
+F 0 "R12" H 7320 5496 50  0000 L CNN
+F 1 "47.5k" H 7320 5405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7180 5450 50  0001 C CNN
+F 3 "~" H 7250 5450 50  0001 C CNN
+F 4 "0.005" H 7250 5450 50  0001 C CNN "Vendor Price 100p"
+F 5 "0.013" H 7250 5450 50  0001 C CNN "Vendor Price 10p"
+F 6 "0.082" H 7250 5450 50  0001 C CNN "Vendor Price 1p"
+F 7 "603-RC0603FR-0747K5L" H 7250 5450 50  0001 C CNN "Vendor SKU"
+F 8 "Mouser" H 7250 5450 50  0001 C CNN "Vendor"
+	1    7250 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 5100 7250 5200
+Wire Wire Line
+	8250 5200 7250 5200
+Connection ~ 7250 5200
+Wire Wire Line
+	7250 5200 7250 5300
+$Comp
+L power:GND #PWR0109
+U 1 1 5DD6E568
+P 7250 5800
+F 0 "#PWR0109" H 7250 5550 50  0001 C CNN
+F 1 "GND" H 7255 5627 50  0000 C CNN
+F 2 "" H 7250 5800 50  0001 C CNN
+F 3 "" H 7250 5800 50  0001 C CNN
+	1    7250 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 5800 7250 5600
+Connection ~ 7750 3500
+Wire Wire Line
+	7750 3500 8250 3500
+Wire Wire Line
+	7750 4900 8250 4900
+Wire Wire Line
+	6750 3500 6850 3500
+Connection ~ 7500 3500
+Wire Wire Line
+	7500 3500 7750 3500
+$Comp
+L Device:C C3
+U 1 1 5DD82835
+P 6850 3900
+F 0 "C3" H 6600 3950 50  0000 L CNN
+F 1 "0.1uF/25V" H 6300 3850 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6888 3750 50  0001 C CNN
+F 3 "~" H 6850 3900 50  0001 C CNN
+F 4 "Mouser" H 6850 3900 50  0001 C CNN "Vendor"
+F 5 "0.013" H 6850 3900 50  0001 C CNN "Vendor Price 10p"
+F 6 "0.083" H 6850 3900 50  0001 C CNN "Vendor Price 1p"
+F 7 "80-C0603C104M3RAC" H 6850 3900 50  0001 C CNN "Vendor SKU"
+	1    6850 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0154
+U 1 1 5DD8283B
+P 6850 4250
+F 0 "#PWR0154" H 6850 4000 50  0001 C CNN
+F 1 "GND" H 6855 4077 50  0000 C CNN
+F 2 "" H 6850 4250 50  0001 C CNN
+F 3 "" H 6850 4250 50  0001 C CNN
+	1    6850 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 4250 6850 4050
+Wire Wire Line
+	6850 3750 6850 3500
+Connection ~ 6850 3500
+Wire Wire Line
+	6850 3500 7500 3500
+$Comp
+L Interface_USB:CP2102N-A01-GQFN24 U2
+U 1 1 5DC18792
+P 8850 4900
+F 0 "U2" H 8850 5981 50  0000 C CNN
+F 1 "CP2102N-A01-GQFN24" H 8850 5890 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" H 9300 4100 50  0001 L CNN
+F 3 "https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf" H 8900 3850 50  0001 C CNN
+F 4 "Mouser" H 8850 4900 50  0001 C CNN "Vendor"
+F 5 "634-CP2102NA01GQFN24" H 8850 4900 50  0001 C CNN "Vendor SKU"
+F 6 "1.31" H 8850 4900 50  0001 C CNN "Vendor Price 10p"
+F 7 "1.38" H 8850 4900 50  0001 C CNN "Vendor Price 1p"
+	1    8850 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 4000 8850 3500
+Wire Wire Line
+	8850 3500 8750 3500
+Connection ~ 8750 3500
+NoConn ~ 8250 4700
+NoConn ~ 9450 4400
+$Comp
+L power:+3.3V #PWR0155
+U 1 1 5F1AE8DE
+P 6750 3500
+F 0 "#PWR0155" H 6750 3350 50  0001 C CNN
+F 1 "+3.3V" H 6765 3673 50  0000 C CNN
+F 2 "" H 6750 3500 50  0001 C CNN
+F 3 "" H 6750 3500 50  0001 C CNN
+	1    6750 3500
+	1    0    0    -1  
+$EndComp
+Text GLabel 6800 4800 0    50   Input ~ 0
+PP5V
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5F1FE5B6
+P 10200 5400
+AR Path="/5EA0B24D/5F1FE5B6" Ref="TP?"  Part="1" 
+AR Path="/5EA5FEAD/5F1FE5B6" Ref="TP10"  Part="1" 
+F 0 "TP10" H 10142 5426 50  0000 R CNN
+F 1 "FT_TX" H 10142 5517 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10400 5400 50  0001 C CNN
+F 3 "~" H 10400 5400 50  0001 C CNN
+	1    10200 5400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10200 5400 10200 5300
+Text HLabel 10200 5300 1    50   Output ~ 0
+FT_TX
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5F2042A2
+P 10650 5400
+AR Path="/5EA0B24D/5F2042A2" Ref="TP?"  Part="1" 
+AR Path="/5EA5FEAD/5F2042A2" Ref="TP11"  Part="1" 
+F 0 "TP11" H 10592 5426 50  0000 R CNN
+F 1 "FT_RX" H 10592 5517 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10850 5400 50  0001 C CNN
+F 3 "~" H 10850 5400 50  0001 C CNN
+	1    10650 5400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10650 5400 10650 5300
+Text HLabel 10650 5300 1    50   Output ~ 0
+FT_RX
+$EndSCHEMATC
