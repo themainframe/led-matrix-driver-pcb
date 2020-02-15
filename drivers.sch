@@ -25,6 +25,10 @@ F 1 "IS32FL3738" H 4550 3064 50  0000 C CNN
 F 2 "Package_SO:SOP65P640X110-28N" H 4400 3000 50  0001 C CNN
 F 3 "http://www.issi.com/WW/pdf/IS32FL3738.pdf" H 4400 3000 50  0001 C CNN
 F 4 "Matrix A" H 4550 2973 50  0000 C CNN "Matrix"
+F 5 "Digi-Key" H 4400 3000 50  0001 C CNN "Vendor"
+F 6 "1.53" H 4400 3000 50  0001 C CNN "Vendor Price 10p"
+F 7 "1.71" H 4400 3000 50  0001 C CNN "Vendor Price 1p"
+F 8 "706-1664-1-ND" H 4400 3000 50  0001 C CNN "Vendor SKU"
 	1    4400 3000
 	1    0    0    -1  
 $EndComp
@@ -224,6 +228,10 @@ F 1 "IS32FL3738" H 7100 3064 50  0000 C CNN
 F 2 "Package_SO:SOP65P640X110-28N" H 6950 3000 50  0001 C CNN
 F 3 "http://www.issi.com/WW/pdf/IS32FL3738.pdf" H 6950 3000 50  0001 C CNN
 F 4 "Matrix B" H 7100 2973 50  0000 C CNN "Matrix"
+F 5 "Digi-Key" H 6950 3000 50  0001 C CNN "Vendor"
+F 6 "1.53" H 6950 3000 50  0001 C CNN "Vendor Price 10p"
+F 7 "1.71" H 6950 3000 50  0001 C CNN "Vendor Price 1p"
+F 8 "706-1664-1-ND" H 6950 3000 50  0001 C CNN "Vendor SKU"
 	1    6950 3000
 	1    0    0    -1  
 $EndComp
@@ -294,6 +302,10 @@ F 1 "IS32FL3738" H 9550 3014 50  0000 C CNN
 F 2 "Package_SO:SOP65P640X110-28N" H 9400 2950 50  0001 C CNN
 F 3 "http://www.issi.com/WW/pdf/IS32FL3738.pdf" H 9400 2950 50  0001 C CNN
 F 4 "Matrix C" H 9550 2923 50  0000 C CNN "Matrix"
+F 5 "Digi-Key" H 9400 2950 50  0001 C CNN "Vendor"
+F 6 "1.53" H 9400 2950 50  0001 C CNN "Vendor Price 10p"
+F 7 "1.71" H 9400 2950 50  0001 C CNN "Vendor Price 1p"
+F 8 "706-1664-1-ND" H 9400 2950 50  0001 C CNN "Vendor SKU"
 	1    9400 2950
 	1    0    0    -1  
 $EndComp
@@ -1794,4 +1806,43 @@ Wire Wire Line
 NoConn ~ 9100 3950
 NoConn ~ 6650 4000
 NoConn ~ 4100 4000
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5E62D1C6
+P 9800 6150
+F 0 "TP5" V 9995 6222 50  0000 C CNN
+F 1 "C5V" V 9904 6222 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10000 6150 50  0001 C CNN
+F 3 "~" H 10000 6150 50  0001 C CNN
+	1    9800 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 6250 9800 6150
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5E63F79C
+P 7350 6150
+F 0 "TP4" V 7545 6222 50  0000 C CNN
+F 1 "B5V" V 7454 6222 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 7550 6150 50  0001 C CNN
+F 3 "~" H 7550 6150 50  0001 C CNN
+	1    7350 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 6250 7350 6150
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5E650E23
+P 4750 6150
+F 0 "TP3" V 4945 6222 50  0000 C CNN
+F 1 "A5V" V 4854 6222 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4950 6150 50  0001 C CNN
+F 3 "~" H 4950 6150 50  0001 C CNN
+	1    4750 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 6250 4750 6150
 $EndSCHEMATC

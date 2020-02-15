@@ -198,8 +198,6 @@ NoConn ~ 5350 5050
 NoConn ~ 5250 5050
 NoConn ~ 4650 4600
 NoConn ~ 4650 4400
-NoConn ~ 4650 4100
-NoConn ~ 4650 4000
 NoConn ~ 4650 3900
 Wire Wire Line
 	3450 3400 3800 3400
@@ -292,48 +290,6 @@ F 3 "" H 3600 3750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED D4
-U 1 1 5EF1FB24
-P 3950 4000
-F 0 "D4" H 3943 4216 50  0000 C CNN
-F 1 "LED" H 3943 4125 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric" H 3950 4000 50  0001 C CNN
-F 3 "~" H 3950 4000 50  0001 C CNN
-	1    3950 4000
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	3800 4000 3600 4000
-$Comp
-L Device:R R?
-U 1 1 5EF1FB2C
-P 3450 4000
-AR Path="/5EF1FB2C" Ref="R?"  Part="1" 
-AR Path="/5EA0B24D/5EF1FB2C" Ref="R?"  Part="1" 
-AR Path="/5EB11343/5EF1FB2C" Ref="R5"  Part="1" 
-F 0 "R5" V 3550 4100 50  0000 C CNN
-F 1 "2k" V 3550 3950 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3335 4000 50  0001 C CNN
-F 3 "~" H 3450 4000 50  0001 C CNN
-	1    3450 4000
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3050 4000 3050 4100
-$Comp
-L power:+3.3V #PWR0119
-U 1 1 5EF1FB33
-P 3050 4100
-F 0 "#PWR0119" H 3050 3950 50  0001 C CNN
-F 1 "+3.3V" H 3065 4273 50  0000 C CNN
-F 2 "" H 3050 4100 50  0001 C CNN
-F 3 "" H 3050 4100 50  0001 C CNN
-	1    3050 4100
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	3050 4000 3300 4000
-$Comp
 L Device:R R?
 U 1 1 5EB7EC19
 P 3850 3750
@@ -351,8 +307,6 @@ Wire Wire Line
 	4000 3750 4300 3750
 Wire Wire Line
 	4300 3500 4300 3750
-Wire Wire Line
-	4100 4000 4500 4000
 $Comp
 L Switch:SW_Push SW2
 U 1 1 5EA157F9
@@ -361,6 +315,11 @@ F 0 "SW2" H 6950 5835 50  0000 C CNN
 F 1 "SW_Push" H 6950 5744 50  0000 C CNN
 F 2 "Button_Switch_SMD:SW_SPST_EVQP7A" H 6950 5750 50  0001 C CNN
 F 3 "~" H 6950 5750 50  0001 C CNN
+F 4 "Digi-Key" H 6950 5550 50  0001 C CNN "Vendor"
+F 5 "0.20" H 6950 5550 50  0001 C CNN "Vendor Price 100p"
+F 6 "0.21" H 6950 5550 50  0001 C CNN "Vendor Price 10p"
+F 7 "0.23" H 6950 5550 50  0001 C CNN "Vendor Price 1p"
+F 8 "P16763CT-ND " H 6950 5550 50  0001 C CNN "Vendor SKU"
 	1    6950 5550
 	1    0    0    -1  
 $EndComp
@@ -372,7 +331,10 @@ P 5600 4000
 F 0 "U3" H 5575 5387 60  0000 C CNN
 F 1 "ESP32-WROOM" H 5575 5281 60  0000 C CNN
 F 2 "RF_Module:ESP32-WROOM-32" H 5950 5350 60  0001 C CNN
-F 3 "" H 5150 4450 60  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf" H 5150 4450 60  0001 C CNN
+F 4 "Digi-Key" H 5600 4000 50  0001 C CNN "Vendor"
+F 5 "2.90" H 5600 4000 50  0001 C CNN "Vendor Price 1p"
+F 6 "1904-1023-1-ND " H 5600 4000 50  0001 C CNN "Vendor SKU"
 	1    5600 4000
 	1    0    0    -1  
 $EndComp
@@ -424,10 +386,6 @@ BUT_B
 Wire Wire Line
 	6600 3950 6500 3950
 NoConn ~ 4650 3800
-Wire Wire Line
-	4500 4000 4500 4200
-Wire Wire Line
-	4500 4200 4650 4200
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5E92AD3D
@@ -436,7 +394,176 @@ F 0 "SW1" H 7900 5835 50  0000 C CNN
 F 1 "SW_Push" H 7900 5744 50  0000 C CNN
 F 2 "Button_Switch_SMD:SW_SPST_EVQP7A" H 7900 5750 50  0001 C CNN
 F 3 "~" H 7900 5750 50  0001 C CNN
+F 4 "Digi-Key" H 7900 5550 50  0001 C CNN "Vendor"
+F 5 "0.20" H 7900 5550 50  0001 C CNN "Vendor Price 100p"
+F 6 "0.21" H 7900 5550 50  0001 C CNN "Vendor Price 10p"
+F 7 "0.23" H 7900 5550 50  0001 C CNN "Vendor Price 1p"
+F 8 "P16763CT-ND " H 7900 5550 50  0001 C CNN "Vendor SKU"
 	1    7900 5550
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4650 4200 4550 4200
+$Comp
+L Device:Crystal Y1
+U 1 1 5E546ED8
+P 3850 4150
+F 0 "Y1" H 3850 4418 50  0000 C CNN
+F 1 "32.768kHz" H 3850 4327 50  0000 C CNN
+F 2 "Crystal:Crystal_SMD_MicroCrystal_CC7V-T1A-2Pin_3.2x1.5mm" H 3850 4150 50  0001 C CNN
+F 3 "https://docs.rs-online.com/3f68/0900766b80d2cb67.pdf" H 3850 4150 50  0001 C CNN
+F 4 "RS Online" H 3850 4150 50  0001 C CNN "Vendor"
+F 5 "0.77" H 3850 4150 50  0001 C CNN "Vendor Price 100p"
+F 6 "0.84" H 3850 4150 50  0001 C CNN "Vendor Price 10p"
+F 7 "1.05" H 3850 4150 50  0001 C CNN "Vendor Price 1p"
+F 8 "672-7638" H 3850 4150 50  0001 C CNN "Vendor SKU"
+	1    3850 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E548892
+P 3650 4650
+AR Path="/5EA5FEAD/5E548892" Ref="C?"  Part="1" 
+AR Path="/5EB11343/5E548892" Ref="C31"  Part="1" 
+F 0 "C31" V 3765 4696 50  0000 L CNN
+F 1 "12pF" V 3850 4600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3688 4500 50  0001 C CNN
+F 3 "~" H 3650 4650 50  0001 C CNN
+F 4 "" H 3650 4650 50  0001 C CNN "Vendor"
+F 5 "" H 3650 4650 50  0001 C CNN "Vendor Price 10p"
+F 6 "" H 3650 4650 50  0001 C CNN "Vendor Price 1p"
+F 7 "" H 3650 4650 50  0001 C CNN "Vendor SKU"
+	1    3650 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5E54B6BD
+P 4050 4650
+AR Path="/5EA5FEAD/5E54B6BD" Ref="C?"  Part="1" 
+AR Path="/5EB11343/5E54B6BD" Ref="C32"  Part="1" 
+F 0 "C32" V 3800 4700 50  0000 L CNN
+F 1 "12pF" V 3900 4600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4088 4500 50  0001 C CNN
+F 3 "~" H 4050 4650 50  0001 C CNN
+F 4 "" H 4050 4650 50  0001 C CNN "Vendor"
+F 5 "" H 4050 4650 50  0001 C CNN "Vendor Price 10p"
+F 6 "" H 4050 4650 50  0001 C CNN "Vendor Price 1p"
+F 7 "" H 4050 4650 50  0001 C CNN "Vendor SKU"
+	1    4050 4650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4650 4000 3650 4000
+Wire Wire Line
+	3650 4000 3650 4150
+Wire Wire Line
+	3650 4150 3700 4150
+Wire Wire Line
+	4000 4150 4050 4150
+Wire Wire Line
+	4050 4150 4050 4100
+Wire Wire Line
+	4050 4100 4650 4100
+Wire Wire Line
+	2650 5200 2900 5200
+$Comp
+L power:+3.3V #PWR0119
+U 1 1 5EF1FB33
+P 2650 5300
+F 0 "#PWR0119" H 2650 5150 50  0001 C CNN
+F 1 "+3.3V" H 2665 5473 50  0000 C CNN
+F 2 "" H 2650 5300 50  0001 C CNN
+F 3 "" H 2650 5300 50  0001 C CNN
+	1    2650 5300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2650 5200 2650 5300
+$Comp
+L Device:R R?
+U 1 1 5EF1FB2C
+P 3050 5200
+AR Path="/5EF1FB2C" Ref="R?"  Part="1" 
+AR Path="/5EA0B24D/5EF1FB2C" Ref="R?"  Part="1" 
+AR Path="/5EB11343/5EF1FB2C" Ref="R5"  Part="1" 
+F 0 "R5" V 3150 5300 50  0000 C CNN
+F 1 "2k" V 3150 5150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2935 5200 50  0001 C CNN
+F 3 "~" H 3050 5200 50  0001 C CNN
+	1    3050 5200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3400 5200 3200 5200
+$Comp
+L Device:LED D4
+U 1 1 5EF1FB24
+P 3550 5200
+F 0 "D4" H 3543 5416 50  0000 C CNN
+F 1 "LED" H 3543 5325 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 3550 5200 50  0001 C CNN
+F 3 "~" H 3550 5200 50  0001 C CNN
+	1    3550 5200
+	-1   0    0    1   
+$EndComp
+Text Label 4000 5200 0    50   ~ 0
+LED_A
+Wire Wire Line
+	4000 5200 3700 5200
+Text Label 4550 4200 2    50   ~ 0
+LED_A
+$Comp
+L power:GND #PWR0166
+U 1 1 5E56ACD9
+P 4050 4800
+F 0 "#PWR0166" H 4050 4550 50  0001 C CNN
+F 1 "GND" H 4055 4627 50  0000 C CNN
+F 2 "" H 4050 4800 50  0001 C CNN
+F 3 "" H 4050 4800 50  0001 C CNN
+	1    4050 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0169
+U 1 1 5E56BBE5
+P 3650 4800
+F 0 "#PWR0169" H 3650 4550 50  0001 C CNN
+F 1 "GND" H 3655 4627 50  0000 C CNN
+F 2 "" H 3650 4800 50  0001 C CNN
+F 3 "" H 3650 4800 50  0001 C CNN
+	1    3650 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4150 4050 4450
+Connection ~ 4050 4150
+Wire Wire Line
+	3650 4150 3650 4450
+Connection ~ 3650 4150
+$Comp
+L Device:R R?
+U 1 1 5E5AEEB4
+P 3850 4450
+AR Path="/5E5AEEB4" Ref="R?"  Part="1" 
+AR Path="/5EA0B24D/5E5AEEB4" Ref="R?"  Part="1" 
+AR Path="/5EB11343/5E5AEEB4" Ref="R14"  Part="1" 
+F 0 "R14" V 3950 4550 50  0000 C CNN
+F 1 "7.5M" V 3950 4400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3735 4450 50  0001 C CNN
+F 3 "~" H 3850 4450 50  0001 C CNN
+	1    3850 4450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 4450 4050 4450
+Connection ~ 4050 4450
+Wire Wire Line
+	4050 4450 4050 4500
+Wire Wire Line
+	3700 4450 3650 4450
+Connection ~ 3650 4450
+Wire Wire Line
+	3650 4450 3650 4500
 $EndSCHEMATC

@@ -76,15 +76,15 @@ Wire Wire Line
 	3900 3700 3900 3400
 Connection ~ 3900 3700
 $Comp
-L Regulator_Linear:LD39015M33R U1
+L Regulator_Linear:MIC5219-3.3YM5 U1
 U 1 1 5EA92372
 P 3200 3800
 F 0 "U1" H 3200 4142 50  0000 C CNN
-F 1 "LD39015M33R" H 3200 4051 50  0000 C CNN
+F 1 "MIC5219-3.3YM5-TR" H 3200 4051 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3200 4125 50  0001 C CIN
-F 3 "http://www.st.com/resource/en/datasheet/ld39015.pdf" H 3200 3800 50  0001 C CNN
-F 4 "511-LD39015M33R" H 3200 3800 50  0001 C CNN "Vendor SKU"
-F 5 "Mouser" H 3200 3800 50  0001 C CNN "Vendor"
+F 3 "https://docs.rs-online.com/1253/0900766b8138542f.pdf" H 3200 3800 50  0001 C CNN
+F 4 "MIC5219-3.3YM5-TR" H 3200 3800 50  0001 C CNN "Vendor SKU"
+F 5 "RS-Online" H 3200 3800 50  0001 C CNN "Vendor"
 F 6 "0.61" H 3200 3800 50  0001 C CNN "Vendor Price 10p"
 F 7 "0.72" H 3200 3800 50  0001 C CNN "Vendor Price 1p"
 	1    3200 3800
@@ -288,12 +288,13 @@ U 1 1 5F1855FC
 P 8700 1700
 F 0 "F1" V 8475 1700 50  0000 C CNN
 F 1 "2A" V 8566 1700 50  0000 C CNN
-F 2 "Fuse:Fuse_0805_2012Metric" H 8750 1500 50  0001 L CNN
+F 2 "Fuse:Bourns_MF-MSMF260-2_Polyfuse_2.6A" H 8750 1500 50  0001 L CNN
 F 3 "~" H 8700 1700 50  0001 C CNN
-F 4 "" H 8700 1700 50  0001 C CNN "Vendor"
-F 5 "" H 8700 1700 50  0001 C CNN "Vendor SKU"
-F 6 "" H 8700 1700 50  0001 C CNN "Vendor Price 10p"
-F 7 "" H 8700 1700 50  0001 C CNN "Vendor Price 1p"
+F 4 "RS-Online" H 8700 1700 50  0001 C CNN "Vendor"
+F 5 "647-8257" H 8700 1700 50  0001 C CNN "Vendor SKU"
+F 6 "0.28" H 8700 1700 50  0001 C CNN "Vendor Price 10p"
+F 7 "0.28" H 8700 1700 50  0001 C CNN "Vendor Price 1p"
+F 8 "0.27" H 8700 1700 50  0001 C CNN "Vendor Price 100p"
 	1    8700 1700
 	0    1    1    0   
 $EndComp
@@ -303,7 +304,7 @@ U 1 1 5F1855F3
 P 7000 1900
 F 0 "J1" H 7057 2367 50  0000 C CNN
 F 1 "USB_B_Micro" H 7057 2276 50  0000 C CNN
-F 2 "Connector_USB:USB_Micro-B_GCT_USB3076-30-A" H 7150 1850 50  0001 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 7150 1850 50  0001 C CNN
 F 3 "~" H 7150 1850 50  0001 C CNN
 F 4 "Farnell" H 7000 1900 50  0001 C CNN "Vendor"
 F 5 "2443117" H 7000 1900 50  0001 C CNN "Vendor SKU"
@@ -417,13 +418,11 @@ Wire Wire Line
 Connection ~ 1900 5800
 Text Notes 2450 5100 0    100  ~ 0
 Boot Control Trickery
-Text GLabel 9050 1700 2    49   Input ~ 0
+Text GLabel 9800 1700 2    49   Input ~ 0
 PP5V
 Wire Wire Line
 	8400 1700 8550 1700
 Connection ~ 8400 1700
-Wire Wire Line
-	8850 1700 9050 1700
 $Comp
 L Connector:TestPoint TP?
 U 1 1 5ECA669B
@@ -729,8 +728,6 @@ F 3 "" H 6750 3500 50  0001 C CNN
 	1    6750 3500
 	1    0    0    -1  
 $EndComp
-Text GLabel 6800 4800 0    50   Input ~ 0
-PP5V
 $Comp
 L Connector:TestPoint TP?
 U 1 1 5F1FE5B6
@@ -766,14 +763,84 @@ Wire Wire Line
 Text HLabel 10650 5300 1    50   Output ~ 0
 FT_RX
 $Comp
-L Connector_Generic:Conn_02x02_Odd_Even J?
-U 1 1 5EDA1126
-P 2300 1450
-F 0 "J?" H 2350 1667 50  0000 C CNN
-F 1 "Conn_02x02_Odd_Even" H 2350 1576 50  0000 C CNN
-F 2 "Connector_Molex:Molex_Micro-Fit_3.0_43045-0400_2x02_P3.00mm_Horizontal" H 2300 1450 50  0001 C CNN
-F 3 "~" H 2300 1450 50  0001 C CNN
-	1    2300 1450
+L Connector:Barrel_Jack J8
+U 1 1 5E4B6C8E
+P 2600 1800
+F 0 "J8" H 2657 2125 50  0000 C CNN
+F 1 "Barrel_Jack" H 2657 2034 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Wuerth_6941xx301002" H 2650 1760 50  0001 C CNN
+F 3 "~" H 2650 1760 50  0001 C CNN
+F 4 "RS-Online" H 2600 1800 50  0001 C CNN "Vendor"
+F 5 "0.74" H 2600 1800 50  0001 C CNN "Vendor Price 1p"
+F 6 "122-4879" H 2600 1800 50  0001 C CNN "Vendor SKU"
+	1    2600 1800
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2900 1900 3400 1900
+$Comp
+L power:GND #PWR0165
+U 1 1 5E4BA335
+P 3400 1900
+F 0 "#PWR0165" H 3400 1650 50  0001 C CNN
+F 1 "GND" H 3405 1727 50  0000 C CNN
+F 2 "" H 3400 1900 50  0001 C CNN
+F 3 "" H 3400 1900 50  0001 C CNN
+	1    3400 1900
+	1    0    0    -1  
+$EndComp
+Text GLabel 4650 1700 2    49   Input ~ 0
+PP5V
+Wire Wire Line
+	4650 1700 4350 1700
+$Comp
+L Diode:MBRA340 D5
+U 1 1 5E4CDCA2
+P 4200 1700
+F 0 "D5" H 4200 1450 50  0000 C CNN
+F 1 "MBRA340" H 4200 1550 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 4200 1525 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/MBRA340T3-D.PDF" H 4200 1700 50  0001 C CNN
+	1    4200 1700
+	-1   0    0    1   
+$EndComp
+Text Notes 2700 1150 0    100  ~ 0
+Barrel DC Input
+$Comp
+L Diode:MBRA340 D6
+U 1 1 5E4DDDFC
+P 9400 1700
+F 0 "D6" H 9400 1450 50  0000 C CNN
+F 1 "MBRA340" H 9400 1550 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA" H 9400 1525 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/MBRA340T3-D.PDF" H 9400 1700 50  0001 C CNN
+	1    9400 1700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8850 1700 9250 1700
+Wire Wire Line
+	9550 1700 9800 1700
+Text Label 6800 4800 2    50   ~ 0
+USB_5V
+$Comp
+L Device:Polyfuse F2
+U 1 1 5E7434FA
+P 3650 1700
+F 0 "F2" V 3425 1700 50  0000 C CNN
+F 1 "2A" V 3516 1700 50  0000 C CNN
+F 2 "Fuse:Bourns_MF-MSMF260-2_Polyfuse_2.6A" H 3700 1500 50  0001 L CNN
+F 3 "~" H 3650 1700 50  0001 C CNN
+F 4 "RS-Online" H 3650 1700 50  0001 C CNN "Vendor"
+F 5 "647-8257" H 3650 1700 50  0001 C CNN "Vendor SKU"
+F 6 "0.28" H 3650 1700 50  0001 C CNN "Vendor Price 10p"
+F 7 "0.28" H 3650 1700 50  0001 C CNN "Vendor Price 1p"
+F 8 "0.27" H 3650 1700 50  0001 C CNN "Vendor Price 100p"
+	1    3650 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2900 1700 3500 1700
+Wire Wire Line
+	3800 1700 4050 1700
 $EndSCHEMATC
