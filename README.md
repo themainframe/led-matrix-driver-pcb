@@ -1,4 +1,4 @@
-# tx-led-matrix-driver
+# led-matrix-driver-pcb
 
 This is the CAM repository for my LED Matrix Driver Project based on ESP32.
 
